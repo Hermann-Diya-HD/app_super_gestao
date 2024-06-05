@@ -35,3 +35,12 @@ Route::get('/contactos', [ContactoController::class, 'contacto']);
     return ("Contactos agora");
 });*/
 
+Route::get('/contactos/{nome}/{}', function($xyz)
+{
+    echo 'Estamos aqui '.$xyz; 
+}
+);
+
+
+
+

@@ -9,6 +9,7 @@ class PrincipalController extends Controller
     //
     public function principal()
     {
-        echo "Principal no PrincipalController";
+        //echo "Principal no PrincipalController";
+        return view ('site.principal');
     }
 }
