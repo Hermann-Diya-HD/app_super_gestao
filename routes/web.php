@@ -23,6 +23,6 @@ Route::get('/sobre-nos', function () {
 });
 
 Route::get('/contactos', function () {
-    return ("Contactos");
+    return ("Contactos agora");
 });
 
