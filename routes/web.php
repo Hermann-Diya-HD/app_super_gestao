@@ -35,11 +35,17 @@ Route::get('/contactos', [ContactoController::class, 'contacto']);
     return ("Contactos agora");
 });*/
 
-Route::get('/contactos/{nome}/{}', function($xyz)
+//nome, categoria, assunto, mensagem
+Route::get('/contactos/{nome?}/{categoria_id?}/{assunto?}/{mensagem?}', 
+        function(
+            $nome = 'Desconhecido', 
+            $categoria_id = 1, 
+            $assunto = 'Sem assunto', 
+            $mensagem = 'Mensagem não informada')
 {
-    echo 'Estamos aqui '.$xyz; 
-}
-);
+    echo 'Estamos aqui '.$nome . '-' .$categoria_id. '-'.$assunto. '-'.$mensagem ; 
+})->where('categoria_id', '[0-9]+')->where('nome', '[A-Za-z]+');
+
 
 
 
