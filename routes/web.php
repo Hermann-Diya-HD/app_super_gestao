@@ -40,6 +40,7 @@ Route::get('/', function () {
 Route::prefix('/site')->group(function(){ //Agrupar as rotas com prefixo 
 Route::get('/', [PrincipalController::class, 'principal'])->name('site.index');
 Route::get('/sobre-nos', [SobreNosController::class, 'sobreNos'])->name('site.sobrenos');
+Route::post('/contactos', [ContactoController::class, 'contacto'])->name('site.contactos');
 Route::get('/contactos', [ContactoController::class, 'contacto'])->name('site.contactos');
 });
 
