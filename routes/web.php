@@ -42,6 +42,7 @@ Route::get('/', [PrincipalController::class, 'principal'])->name('site.index');
 Route::get('/sobre-nos', [SobreNosController::class, 'sobreNos'])->name('site.sobrenos');
 Route::post('/contactos', [ContactoController::class, 'contacto'])->name('site.contactos');
 Route::get('/contactos', [ContactoController::class, 'contacto'])->name('site.contactos');
+Route::post('/store', [ContactoController::class, 'store'])->name('site.contactos.store');
 });
 
 

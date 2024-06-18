@@ -2,7 +2,7 @@
 {{ $slot }}
 
     
-<form action={{route('site.contactos') }} method="POST">
+<form action={{route('site.contactos.store') }} method="POST">
     @csrf
     <input name="nome" type="text" placeholder="Nome" class="{{ $classe }}">
     <br>
@@ -12,9 +12,9 @@
     <br>
     <select name="motivo_contacto" class="{{ $classe }}">
         <option value="">Qual o motivo do contato?</option>
-        <option value="">Dúvida</option>
-        <option value="">Elogio</option>
-        <option value="">Reclamação</option>
+        <option value="1">Dúvida</option>
+        <option value="2">Elogio</option>
+        <option value="3">Reclamação</option>
     </select>
     <br>
     <textarea name="mensagem" class="{{ $classe }}">Preencha aqui a sua mensagem</textarea>
