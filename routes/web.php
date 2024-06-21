@@ -37,23 +37,23 @@ Route::get('/', function () {
     return ("Teste Principal");
 });
 
-Route::prefix('/site')->group(function(){ //Agrupar as rotas com prefixo 
+//Route::prefix('/site')->group(function(){ //Agrupar as rotas com prefixo 
 Route::get('/', [PrincipalController::class, 'principal'])->name('site.index');
 Route::get('/sobre-nos', [SobreNosController::class, 'sobreNos'])->name('site.sobrenos');
 Route::post('/contactos', [ContactoController::class, 'contacto'])->name('site.contactos');
 Route::get('/contactos', [ContactoController::class, 'contacto'])->name('site.contactos');
 Route::post('/store', [ContactoController::class, 'store'])->name('site.contactos.store');
-});
+//});
 
 
 
-Route::prefix('/app')->group(function(){
+//Route::prefix('/app')->group(function(){
     Route::get('/login', function(){return 'Login'; })->name('app.login');
     Route::get('/clientes', function(){return 'Clientes'; })->name('app.clientes');
     //Route::get('/fornecedores', function(){return 'Fornecedores'; })->name('app.fornecedores');
     Route::get('/fornecedores', [FornecedorController::class, 'index'])->name('site.fornecedores');
     Route::get('/produtos', function(){return 'Produtos'; })->name('app.produtos');
-});
+//});
 
 Route::get('/rota1', function() {
     echo 'Rota 1';

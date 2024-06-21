@@ -9,11 +9,12 @@ use App\Models\SiteContacto;
 class ContactoController extends Controller
 {
     //
-    public function contacto()
+    public function contacto(Request $request)
     {
+        dd($request);
        // echo "contacto controller";
        
-       return view ('site.contacto');
+       //return view ('site.contacto');
        
     }
 

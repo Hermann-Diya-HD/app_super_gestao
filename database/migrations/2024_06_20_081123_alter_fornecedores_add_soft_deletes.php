@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('fornecedors', function (Blueprint $table) {
-            $table->string('uf', 2); 
-            $table->string('email', 150); 
+        //
+        Schema::table("fornecedores", function (Blueprint $table) {
+            $table->softDeletes();
         });
     }
 
@@ -24,10 +24,10 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down() // O método down só executa com o comando php artisan migrate:rollback
+    public function down()
     {
-        Schema::table('fornecedors', function (Blueprint $table) {
-            $table->dropColumn(['uf', 'email']); 
+        Schema::table("fornecedores", function (Blueprint $table) {
+            $table->dropSoftDeletes();
         });
     }
 };
