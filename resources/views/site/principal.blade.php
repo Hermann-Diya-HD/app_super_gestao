@@ -33,7 +33,8 @@
                 <p>Caso tenha qualquer dúvida por favor entre em contacto com nossa equipe pelo formulário abaixo.
                 <p>
                     {{-- @component('site.layouts._components.form_contacto', x => 4) --}}
-                    @component('site.layouts._components.form_contacto', ['classe' => 'borda-branca'])
+                   {{-- @component('site.layouts._components.form_contacto', ['classe' => 'borda-branca']) --}}
+                    @component('site.layouts._components.form_contacto', ['classe' => 'borda-branca', 'motivo_contacto' => $motivo_contacto]) 
                     <p> A nossa equipa entrará em contacto e retornaremos o mais breve possível  </p>
                     <p> O tempo médio de resposta é de 48 horas </p>
                     @endcomponent
